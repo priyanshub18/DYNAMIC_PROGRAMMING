@@ -75,7 +75,7 @@ public:
         int maxi = 1;
         for(int i = 0 ; i < n ; i++){
             for(int pr = 0 ; pr < i ; pr ++){
-                if(nums[pr] < nums[i]){
+                if(nums[pr] < nums[i] and 1 + dp[pr] > dp[i]){
                     dp[i] = max(dp[i] , 1 + dp[pr]);
                 }
             }
